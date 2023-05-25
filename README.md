@@ -16,7 +16,11 @@ The features for this model were the descriptive and informational columns inclu
 
 My initial model included two hidden layers which each had nine neurons and utilized the ReLU activation function which I ran for 100 epochs to get a baseline for the neural network. This resulted in an accuracy score of `0.7245`. During this I found that the accuracy was no longer improving after 10-15 epochs.
 
+<img width="702" alt="Screen Shot 2023-05-24 at 8 35 35 PM" src="https://github.com/leah-apking/deep-learning-challenge/assets/119013360/93d62f9d-f4e0-4015-9c86-c1462cdc308c">
+
 To optimize this model, I ran a Teras Tuner optimization function to cycle through a variety of combinations of hidden layers, neuron counts, and activation functions each of which was tested at 20 epochs. This tuner selected a four-layer neural network utilizing the tanh activation function which produced an accuracy score of `0.7279`, nearly the same as my initial model.
+
+<img width="748" alt="Screen Shot 2023-05-24 at 8 38 01 PM" src="https://github.com/leah-apking/deep-learning-challenge/assets/119013360/43153a12-763a-4b16-a64e-447a22fd35f3">
 
 I then tried to combine these models by using both the ReLU and tanh activation functions with additional hidden layers. Unfortunately, these also resulted in accuracy score around 0.72. Finally, tried eliminating what appeared to be extraneous features such as application type, status, special considerations, and affiliations. This improved the accuracy score slightly to `0.7334`, but still fell short of the 0.75 goal.
 
